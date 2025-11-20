@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './index.css'; 
+import './tailwind.css';
 
 // PrimePro Cleaning - Single-file React component
 // Tailwind CSS utility classes used (assumes Tailwind is configured in the project)
