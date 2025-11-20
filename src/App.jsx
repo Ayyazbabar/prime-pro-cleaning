@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function PrimeProCleaningSite() {
+export default function App {
   const [form, setForm] = useState({ name: "", email: "", phone: "", address: "", service: "House Cleaning", date: "", notes: "" });
   const [submitted, setSubmitted] = useState(false);
 
