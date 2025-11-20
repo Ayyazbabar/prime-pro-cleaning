@@ -1,55 +1,168 @@
-/* General body styling */
+/* ===========================
+   GENERAL STYLING
+=========================== */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9fafb; /* Light gray background */
+    background-color: #f9fafb; /* light gray background */
     margin: 0;
     padding: 0;
+    color: #1f2937; /* Tailwind gray-800 default text color */
 }
 
-/* Hero Section placeholder (if you add hero image later) */
-#hero {
-    background: url('/images/hero-placeholder.jpg') center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h3, h4 {
+    font-family: 'Inter', sans-serif;
+    color: #111827; /* dark gray for headings */
 }
 
-/* Testimonials blockquotes */
+p {
+    line-height: 1.6;
+    color: #4b5563; /* medium gray for paragraphs */
+}
+
+/* ===========================
+   TESTIMONIALS SECTION
+=========================== */
+#testimonials {
+    padding: 2rem 1rem;
+}
+
+#testimonials h3 {
+    font-size: 2rem; /* Tailwind text-2xl */
+    font-weight: 700;
+    text-align: center;
+}
+
+#testimonials .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
 #testimonials blockquote {
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
+    border-left: 4px solid #3b82f6; /* subtle blue accent */
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-style: italic;
 }
+
 #testimonials blockquote:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* About section cards */
-#about h4 {
-    color: #111827; /* Tailwind gray-900 equivalent */
+/* ===========================
+   ABOUT SECTION
+=========================== */
+#about {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 4rem;
+}
+
+#about h3 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 #about p {
-    line-height: 1.6;
+    margin-top: 0.5rem;
+    color: #4b5563;
 }
 
-/* Footer links hover effect */
-footer div.text-xs a {
-    color: #4b5563; /* Tailwind gray-600 */
+#about .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#about .grid div h4 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+#about .grid div p {
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+/* ===========================
+   FOOTER SECTION
+=========================== */
+footer {
+    background-color: #ffffff;
+    padding: 3rem 1rem 1rem 1rem;
+    color: #4b5563;
+    font-size: 0.875rem; /* Tailwind text-sm */
+}
+
+footer .border-t {
+    border-top: 1px solid #e5e7eb; /* Tailwind gray-200 */
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .w-10.h-10 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(to right, #34d399, #3b82f6); /* green to blue */
+}
+
+footer .font-semibold {
+    font-weight: 600;
+}
+
+footer .text-xs {
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: #4b5563;
     text-decoration: none;
     transition: color 0.3s;
 }
-footer div.text-xs a:hover {
+
+footer a:hover {
     color: #2563eb; /* Tailwind blue-600 */
 }
 
-/* Responsive adjustments if needed */
+footer .mt-4.text-center {
+    text-align: center;
+    color: #9ca3af; /* gray-400 */
+    font-size: 0.75rem;
+}
+
+/* ===========================
+   RESPONSIVE STYLING
+=========================== */
 @media (max-width: 768px) {
-    #about .grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+    #about .grid,
+    #testimonials .grid {
+        grid-template-columns: 1fr;
     }
 
-    #testimonials .grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+    footer .flex.gap-6 {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
